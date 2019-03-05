@@ -1,5 +1,4 @@
 import React, { Component,Fragment } from "react";
-import logo from "./logo.svg";
 import data from "./data.json";
 import styles from "./styles.scss"
 import ReactDOM from 'react-dom';
@@ -27,7 +26,8 @@ class App extends Component {
         }
       }
       item.parentId = parseInt(number.join(""));
-      item.checkState = false
+      item.checkState = false;
+      item.show = true;
     });
     function list_to_tree(list) {
       let map = {},
@@ -63,21 +63,19 @@ class App extends Component {
         return (
           <Fragment key={index}>
           <li>
-            <span className="switch-open" onClick={console.log(this)}></span>
+            <span className="switch-open" onClick={()=>{this.toggle(data,index)}}></span>
             <input type="checkbox" checked= {item.checkState}></input>
             <span>{item.moduleName}</span>
-            <ul> {this.generateTree(item.children)}</ul>
+            {item.show ? <ul>{ this.generateTree(item.children)}</ul> :null}
           </li>
           </Fragment>
         );
       }
     }))
   }
-  toggle(e){
-    var $root = ReactDOM.findDOMNode(this);
-        console.log($root);
-    console.log(e)
-    console.log(this)
+  toggle = (data,index)=>{
+    data[index].show = !data[index]
+    this.setState({treeData: this.state.treeData})
   }
   componentWillMount() {
     let treeData = this.getDataStructure(this.state.data);
