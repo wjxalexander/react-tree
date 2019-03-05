@@ -1,0 +1,458 @@
+[
+    { "id": 389, "moduleCode": 100000, "module": "data", "moduleName": "数据分析" },
+    { "id": 391, "moduleCode": 100100, "module": "young", "moduleName": "适龄青年分析" },
+    {
+      "id": 393,
+      "moduleCode": 100101,
+      "module": "men",
+      "moduleName": "男适龄青年分析"
+    },
+    {
+      "id": 395,
+      "moduleCode": 100102,
+      "module": "women",
+      "moduleName": "女适龄青年分析"
+    },
+    {
+      "id": 397,
+      "moduleCode": 100200,
+      "module": "process",
+      "moduleName": "征兵流程分析"
+    },
+    {
+      "id": 399,
+      "moduleCode": 100300,
+      "module": "ratio",
+      "moduleName": "征兵五率分析"
+    },
+    {
+      "id": 401,
+      "moduleCode": 200000,
+      "module": "youth",
+      "moduleName": "适龄青年管理"
+    },
+    {
+      "id": 403,
+      "moduleCode": 200100,
+      "module": "all",
+      "moduleName": "适龄青年查询"
+    },
+    { "id": 405, "moduleCode": 200101, "module": "view", "moduleName": "查询" },
+    {
+      "id": 407,
+      "moduleCode": 200102,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    {
+      "id": 409,
+      "moduleCode": 200200,
+      "module": "stu",
+      "moduleName": "在校大学生"
+    },
+    { "id": 411, "moduleCode": 200201, "module": "view", "moduleName": "查询" },
+    {
+      "id": 413,
+      "moduleCode": 200202,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    {
+      "id": 415,
+      "moduleCode": 200300,
+      "module": "grad",
+      "moduleName": "大学毕业生"
+    },
+    { "id": 417, "moduleCode": 200301, "module": "view", "moduleName": "查询" },
+    {
+      "id": 419,
+      "moduleCode": 200302,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    {
+      "id": 421,
+      "moduleCode": 200400,
+      "module": "senior",
+      "moduleName": "高中毕业生"
+    },
+    { "id": 423, "moduleCode": 200401, "module": "view", "moduleName": "查询" },
+    {
+      "id": 425,
+      "moduleCode": 200402,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    {
+      "id": 427,
+      "moduleCode": 200500,
+      "module": "women",
+      "moduleName": "女适龄青年"
+    },
+    { "id": 429, "moduleCode": 200501, "module": "view", "moduleName": "查询" },
+    {
+      "id": 431,
+      "moduleCode": 200502,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    {
+      "id": 433,
+      "moduleCode": 200600,
+      "module": "general",
+      "moduleName": "普通青年"
+    },
+    { "id": 435, "moduleCode": 200601, "module": "view", "moduleName": "查询" },
+    {
+      "id": 437,
+      "moduleCode": 200602,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    {
+      "id": 439,
+      "moduleCode": 300000,
+      "module": "proc",
+      "moduleName": "征兵流程"
+    },
+    {
+      "id": 441,
+      "moduleCode": 300100,
+      "module": "reg",
+      "moduleName": "兵役登记"
+    },
+    {
+      "id": 443,
+      "moduleCode": 300101,
+      "module": "notify",
+      "moduleName": "发送通知"
+    },
+    {
+      "id": 445,
+      "moduleCode": 300102,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    { "id": 447, "moduleCode": 300103, "module": "view", "moduleName": "查询" },
+    {
+      "id": 449,
+      "moduleCode": 300200,
+      "module": "pre",
+      "moduleName": "预征管理"
+    },
+    {
+      "id": 451,
+      "moduleCode": 300201,
+      "module": "notify",
+      "moduleName": "发送通知"
+    },
+    {
+      "id": 453,
+      "moduleCode": 300202,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    { "id": 455, "moduleCode": 300203, "module": "view", "moduleName": "查询" },
+    {
+      "id": 457,
+      "moduleCode": 300300,
+      "module": "body",
+      "moduleName": "体格检查"
+    },
+    {
+      "id": 459,
+      "moduleCode": 300301,
+      "module": "notify",
+      "moduleName": "发送通知"
+    },
+    {
+      "id": 461,
+      "moduleCode": 300302,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    { "id": 463, "moduleCode": 300303, "module": "view", "moduleName": "查询" },
+    {
+      "id": 465,
+      "moduleCode": 300400,
+      "module": "policy",
+      "moduleName": "政治考核"
+    },
+    {
+      "id": 467,
+      "moduleCode": 300401,
+      "module": "notify",
+      "moduleName": "发送通知"
+    },
+    {
+      "id": 469,
+      "moduleCode": 300402,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    { "id": 471, "moduleCode": 300403, "module": "view", "moduleName": "查询" },
+    {
+      "id": 473,
+      "moduleCode": 300500,
+      "module": "book",
+      "moduleName": "预定新兵"
+    },
+    {
+      "id": 475,
+      "moduleCode": 300501,
+      "module": "notify",
+      "moduleName": "发送通知"
+    },
+    {
+      "id": 477,
+      "moduleCode": 300502,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    { "id": 479, "moduleCode": 300503, "module": "view", "moduleName": "查询" },
+    {
+      "id": 481,
+      "moduleCode": 300600,
+      "module": "train",
+      "moduleName": "役前集训"
+    },
+    {
+      "id": 483,
+      "moduleCode": 300601,
+      "module": "notify",
+      "moduleName": "发送通知"
+    },
+    {
+      "id": 485,
+      "moduleCode": 300602,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    { "id": 487, "moduleCode": 300603, "module": "view", "moduleName": "查询" },
+    {
+      "id": 489,
+      "moduleCode": 300604,
+      "module": "input",
+      "moduleName": "录入结果"
+    },
+    {
+      "id": 491,
+      "moduleCode": 300700,
+      "module": "set",
+      "moduleName": "精准定兵"
+    },
+    {
+      "id": 493,
+      "moduleCode": 300701,
+      "module": "notify",
+      "moduleName": "发送通知"
+    },
+    {
+      "id": 495,
+      "moduleCode": 300702,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    { "id": 497, "moduleCode": 300703, "module": "view", "moduleName": "查询" },
+    {
+      "id": 499,
+      "moduleCode": 300704,
+      "module": "assign",
+      "moduleName": "定兵"
+    },
+    {
+      "id": 501,
+      "moduleCode": 300800,
+      "module": "transport",
+      "moduleName": "运输新兵"
+    },
+    {
+      "id": 503,
+      "moduleCode": 300801,
+      "module": "notify",
+      "moduleName": "发送通知"
+    },
+    {
+      "id": 505,
+      "moduleCode": 300802,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    { "id": 507, "moduleCode": 300803, "module": "view", "moduleName": "查询" },
+    {
+      "id": 509,
+      "moduleCode": 300900,
+      "module": "dismiss",
+      "moduleName": "退兵管理"
+    },
+    {
+      "id": 511,
+      "moduleCode": 300901,
+      "module": "notify",
+      "moduleName": "发送通知"
+    },
+    {
+      "id": 513,
+      "moduleCode": 300902,
+      "module": "update",
+      "moduleName": "联系方式修改"
+    },
+    { "id": 515, "moduleCode": 300903, "module": "view", "moduleName": "查询" },
+    {
+      "id": 517,
+      "moduleCode": 300904,
+      "module": "add",
+      "moduleName": "添加退兵"
+    },
+    {
+      "id": 519,
+      "moduleCode": 300905,
+      "module": "input",
+      "moduleName": "录入信息"
+    },
+    {
+      "id": 521,
+      "moduleCode": 300906,
+      "module": "del",
+      "moduleName": "删除退兵"
+    },
+    {
+      "id": 523,
+      "moduleCode": 400000,
+      "module": "propagate",
+      "moduleName": "宣传发送"
+    },
+    {
+      "id": 525,
+      "moduleCode": 400100,
+      "module": "msg",
+      "moduleName": "宣传信息推送"
+    },
+    { "id": 527, "moduleCode": 400101, "module": "view", "moduleName": "查看" },
+    {
+      "id": 529,
+      "moduleCode": 400102,
+      "module": "task",
+      "moduleName": "新建发送任务"
+    },
+    {
+      "id": 531,
+      "moduleCode": 400103,
+      "module": "template",
+      "moduleName": "信息模板管理"
+    },
+    {
+      "id": 533,
+      "moduleCode": 500000,
+      "module": "warn",
+      "moduleName": "预警监督"
+    },
+    {
+      "id": 535,
+      "moduleCode": 500100,
+      "module": "young",
+      "moduleName": "青年信息预警"
+    },
+    { "id": 537, "moduleCode": 500101, "module": "view", "moduleName": "查询" },
+    {
+      "id": 539,
+      "moduleCode": 500102,
+      "module": "verify",
+      "moduleName": "预警核实"
+    },
+    {
+      "id": 541,
+      "moduleCode": 600000,
+      "module": "sys",
+      "moduleName": "系统管理"
+    },
+    {
+      "id": 543,
+      "moduleCode": 600100,
+      "module": "user",
+      "moduleName": "用户管理"
+    },
+    {
+      "id": 545,
+      "moduleCode": 600101,
+      "module": "create",
+      "moduleName": "新建"
+    },
+    {
+      "id": 547,
+      "moduleCode": 600102,
+      "module": "update",
+      "moduleName": "维护"
+    },
+    { "id": 549, "moduleCode": 600103, "module": "view", "moduleName": "查看" },
+    {
+      "id": 551,
+      "moduleCode": 600200,
+      "module": "role",
+      "moduleName": "角色管理"
+    },
+    {
+      "id": 553,
+      "moduleCode": 600201,
+      "module": "create",
+      "moduleName": "新建"
+    },
+    {
+      "id": 555,
+      "moduleCode": 600202,
+      "module": "update",
+      "moduleName": "维护"
+    },
+    { "id": 557, "moduleCode": 600203, "module": "view", "moduleName": "查看" },
+    {
+      "id": 559,
+      "moduleCode": 600204,
+      "module": "delete",
+      "moduleName": "删除"
+    },
+    {
+      "id": 561,
+      "moduleCode": 600300,
+      "module": "org",
+      "moduleName": "部门管理"
+    },
+    {
+      "id": 563,
+      "moduleCode": 600301,
+      "module": "create",
+      "moduleName": "新建"
+    },
+    {
+      "id": 565,
+      "moduleCode": 600302,
+      "module": "update",
+      "moduleName": "维护"
+    },
+    { "id": 567, "moduleCode": 600303, "module": "view", "moduleName": "查看" },
+    {
+      "id": 569,
+      "moduleCode": 600304,
+      "module": "delete",
+      "moduleName": "删除"
+    },
+    {
+      "id": 571,
+      "moduleCode": 600400,
+      "module": "log",
+      "moduleName": "登录日志"
+    },
+    { "id": 573, "moduleCode": 600401, "module": "view", "moduleName": "查看" },
+    {
+      "id": 575,
+      "moduleCode": 600402,
+      "module": "mine",
+      "moduleName": "个人日志"
+    },
+    {
+      "id": 577,
+      "moduleCode": 600500,
+      "module": "syslog",
+      "moduleName": "操作日志"
+    },
+    { "id": 579, "moduleCode": 600501, "module": "view", "moduleName": "查看" }
+  ]
