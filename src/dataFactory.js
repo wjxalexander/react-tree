@@ -22,14 +22,18 @@ function getDataStructure(data) {
       for (let i = 0; i < list.length; i += 1) {
         map[list[i].moduleCode] = i; // initialize the map,创建映射将每个ID和当前i 映射起来
         list[i].children = []; // initialize the children
+        list[i].parent = null;
       }
       for (let i = 0; i < list.length; i += 1) {
         let node = list[i]; //单独取出
         //说明他有爸爸
         // if you have dangling branches check that map[node.parentId] exists
-        node.parentId !== 0
-          ? list[map[node.parentId]].children.push(node)
-          : roots.push(node);
+        if(node.parentId !== 0){
+          list[map[node.parentId]].children.push(node)
+          node.parent = list[map[node.parentId]]
+        }else{
+          roots.push(node);
+        }
       }
       return roots;
     }

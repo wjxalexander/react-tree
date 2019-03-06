@@ -50,24 +50,27 @@ class App extends Component {
       element.children.length===0 ? element.checkState = state : this.handleChildrenState(element.children,state)
     });
   }
-  monitorChildrenState(treeData){
-    treeData.forEach(item=>{
-      if(item.children.length === 0 ){
-      return item.checkState
-      }else{
-         let index = item.children.findIndex((el)=>!el.checkState)
-         index < 0 ?  this.monitorChildrenState(item.children) : item.checkState = false 
+  monitorChildrenState(item){
+    let parent = item.parent
+    if(item.checkState===true){
+      while(parent){
+        parent.checkState 
+        = parent.children.every(ele=>ele.checkState===true)
+        parent = parent.parent
       }
-      console.log(item.moduleName,item.checkState)
-
-    })
+    }else{
+      while(parent){
+          parent.checkState = false;
+          parent = parent.parent
+      }
+    }
   }
 
   handleClick(item){
     let {treeData} = this.state
     item.checkState = !item.checkState
     this.handleChildrenState(item.children,item.checkState)
-    this.monitorChildrenState(treeData)
+    this.monitorChildrenState(item)
     this.setState({treeData:treeData})
   }
   componentWillMount() {
