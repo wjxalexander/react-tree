@@ -10,13 +10,14 @@ class App extends Component {
       data: data,
       treeData: null
     };
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   generateTree(data) {
     return (data.map((item,index)=>{ 
       if (item.children.length === 0) {
         return (
-          <Fragment key={index}>
+          <Fragment key={`${item.moduleName}-${index}`}>
             <li>
               <input type="checkbox" checked= {item.checkState} onClick={()=>{this.handleClick(item,index)}}></input>
               <span>{item.moduleName}</span>
@@ -46,26 +47,32 @@ class App extends Component {
 
   handleChildrenState(item,state,e){
     item.forEach(element => {
-      element.checkState =state
-      element.children.length===0 ? element.checkState = state : this.handleChildrenState(element.children,state)
+      element.checkState =state;
+      element.children.length===0 ? element.checkState = state : this.handleChildrenState(element.children,state);
     });
   }
   monitorChildrenState(item){
     let parent = item.parent
     if(item.checkState===true){
       while(parent){
-        parent.checkState 
-        = parent.children.every(ele=>ele.checkState===true)
+        parent.checkState = parent.children.every(ele=>ele.checkState===true)
+        // console.log("111")
+        // console.log(parent.children.some(ele=>!ele.checkState))
+        // console.log(parent.isHalfSelected)
+        parent.isHalfSelected = parent.children.some(ele=>!ele.checkState)? true : false
         parent = parent.parent
       }
     }else{
       while(parent){
           parent.checkState = false;
+          // console.log('222')
+          // console.log(parent)
+          // console.log(parent.children.some(ele=>!ele.checkState===false))
+          parent.isHalfSelected = parent.children.some(ele=>!ele.checkState)? true : false
           parent = parent.parent
       }
     }
   }
-
   handleClick(item){
     let {treeData} = this.state
     item.checkState = !item.checkState
@@ -73,6 +80,13 @@ class App extends Component {
     this.monitorChildrenState(item)
     this.setState({treeData:treeData})
   }
+
+  handleSubmit(){
+    let {data,treeData} = this.state
+    console.log("treeData:", treeData)
+    console.log("data:",data)
+  }
+
   componentWillMount() {
     let treeData = getDataStructure(this.state.data);
     this.setState({ treeData: treeData });
@@ -81,10 +95,13 @@ class App extends Component {
     let { treeData } = this.state;
     let ret = this.generateTree(treeData)
     return(
-    <div className="App">
+    <div className="App" style={{display:"flex"}}>
       <ul className="container" style={{display:"flex"}}>     
         {ret}
       </ul>
+      <div>
+        <button onClick={this.handleSubmit}>submit</button>
+      </div>
     </div>);
   }
 }

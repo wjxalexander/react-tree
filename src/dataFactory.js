@@ -30,6 +30,7 @@ function getDataStructure(data) {
         // if you have dangling branches check that map[node.parentId] exists
         if(node.parentId !== 0){
           list[map[node.parentId]].children.push(node)
+          list[map[node.parentId]].isHalfSelected = false
           node.parent = list[map[node.parentId]]
         }else{
           roots.push(node);

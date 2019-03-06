@@ -19,5 +19,7 @@ ul>li{
     position: relative;
     top:2px;
     cursor: pointer;
-
 }
+input:indeterminate + label {
+    background: lime;
+  }
