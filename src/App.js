@@ -64,13 +64,21 @@ class App extends Component {
       //儿子为true时的控制
       while(parent){
         parent.checkState = parent.children.every(ele=>ele.checkState===true)
-        parent.isHalfSelected = parent.children.some(ele=>!ele.checkState) ? true : false
+        if(!item.isHalfSelected){
+          parent.isHalfSelected = parent.children.some(ele=>!ele.checkState) ? true : false
+        }else{
+          parent.isHalfSelected = parent.children.some(ele=>ele.isHalfSelected) ? true : false
+        }
         parent = parent.parent
       }
     }else{
       while(parent){
           parent.checkState = false;
-          parent.isHalfSelected = parent.children.some(ele=>ele.checkState)? true : false
+          if(!item.isHalfSelected){
+            parent.isHalfSelected = parent.children.some(ele => ele.checkState) && !parent.children.every(ele => ele.checkState)? true : false
+          }else{
+            parent.isHalfSelected = parent.children.some(ele=>ele.isHalfSelected) ? true : false
+          }
           parent = parent.parent
       }
     }
