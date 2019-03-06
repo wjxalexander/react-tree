@@ -19,7 +19,9 @@ class App extends Component {
         return (
           <Fragment key={`${item.moduleName}-${index}`}>
             <li>
-              <input type="checkbox" checked= {item.checkState} onClick={()=>{this.handleClick(item,index)}}></input>
+              <span className={ item.checkState ? "inputwrapper inputwrapper-active" : "inputwrapper"}onClick={()=>{this.handleClick(item,index)}}>
+                 <input type="checkbox" checked= {item.checkState} style={{display:"none"}}></input>
+              </span>
               <span>{item.moduleName}</span>
           </li>
           </Fragment>
@@ -30,7 +32,12 @@ class App extends Component {
           <li>
               <span className="switch-open" onClick={()=>{this.toggle(data,index)}}></span>
               {/* 以下是父节点的checkbox */}
-              <input type="checkbox" checked= {item.checkState} onClick={()=>{this.handleClick(item,index)}}></input>
+              <span className={item.checkState ? 
+              "inputwrapper inputwrapper-active" 
+              : (!item.checkState && !item.isHalfSelected ? "inputwrapper" : "inputwrapper inputwrapper-halfselect")} 
+              onClick={()=>{this.handleClick(item,index)}}>
+                <input type="checkbox" checked= {item.checkState} style={{display:"none"}}></input>
+              </span>
               <span >{item.moduleName}</span>
               {item.show ? <ul>{this.generateTree(item.children)}</ul> :null}
           </li>
@@ -54,21 +61,16 @@ class App extends Component {
   monitorChildrenState(item){
     let parent = item.parent
     if(item.checkState===true){
+      //儿子为true时的控制
       while(parent){
         parent.checkState = parent.children.every(ele=>ele.checkState===true)
-        // console.log("111")
-        // console.log(parent.children.some(ele=>!ele.checkState))
-        // console.log(parent.isHalfSelected)
-        parent.isHalfSelected = parent.children.some(ele=>!ele.checkState)? true : false
+        parent.isHalfSelected = parent.children.some(ele=>!ele.checkState) ? true : false
         parent = parent.parent
       }
     }else{
       while(parent){
           parent.checkState = false;
-          // console.log('222')
-          // console.log(parent)
-          // console.log(parent.children.some(ele=>!ele.checkState===false))
-          parent.isHalfSelected = parent.children.some(ele=>!ele.checkState)? true : false
+          parent.isHalfSelected = parent.children.some(ele=>ele.checkState)? true : false
           parent = parent.parent
       }
     }

@@ -20,6 +20,36 @@ ul>li{
     top:2px;
     cursor: pointer;
 }
-input:indeterminate + label {
-    background: lime;
-  }
+.inputwrapper,
+.inputwrapper-inactive{
+    margin: 4px 4px 0 0;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #d9d9d9;
+    position: relative;
+}
+.inputwrapper-active::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #1890ff;
+    border: 0;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    content: ' '
+}
+.inputwrapper-halfselect::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 3px;
+    background-color: #d9d9d9;
+    border: 0;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    content: ' '
+}
